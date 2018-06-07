@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+     <!-- Behavioural Meta Data -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=510, height=800, initial-scale=0.7, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+</head>
+<body>
+
+
+<div id="canvas" width="700" height="700"></div>
+<canvas id="img1" width="2560" height="1600"></canvas>
+<!-- <img id="img2" src="imgs/merry_xmas.jpg" /> -->
+<script src="js/lib/pixi.js"></script>
+<script src="js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/Graphic.js"></script>
+<script type="text/javascript" src="js/controllers/controller_pixi_basic.js"></script>
+
+<script>
+     var canvas = document.getElementById('img1'),
+          context2 = canvas.getContext('2d'),
+          image = new Image();
+
+      image.src = "imgs/merry_xmas.jpg";
+      image.onload = function() {
+        context2.drawImage(image, 0, 0);
+      };
+
+</script>
+</body>
+</html>
